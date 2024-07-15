@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void checkLoginStatus() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    int userLoggedIn = prefs.getInt('loggedin') ?? 1;
+    int? userLoggedIn = prefs.getInt('loggedin') ;
     if (userLoggedIn==1) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (BuildContext context) => BottomTabBar()),
