@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     checkLoginStatus();
-
+  }
 
   void checkLoginStatus() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
